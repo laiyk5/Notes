@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"d537c082666ce02a","type":"file","file":"math/Mathematical Analysis/Real Number.md","x":-1000,"y":-340,"width":400,"height":400},
+		{"id":"0ded3bfd1c5e09c0","type":"file","file":"math/Mathematical Analysis/Limits.md","x":-400,"y":-340,"width":400,"height":400},
+		{"id":"40ece31b2ce1e3bd","type":"file","file":"math/Mathematical Analysis/Continuous Functions.md","x":280,"y":-640,"width":400,"height":400},
+		{"id":"5644d37285242744","type":"file","file":"math/Mathematical Analysis/Series.md","x":200,"y":240,"width":400,"height":400},
+		{"id":"6ff8c2b3a91e174e","type":"file","file":"math/Mathematical Analysis/elementary functions/Trigonometry Functions.md","x":760,"y":240,"width":400,"height":400},
+		{"id":"dbc551f5eca16164","type":"file","file":"math/Mathematical Analysis/Asymptotic Notations.md","x":-200,"y":-1160,"width":400,"height":400},
+		{"id":"27b93c4697da5421","type":"file","file":"math/Mathematical Analysis/Infinitesimals.md","x":-720,"y":-1120,"width":400,"height":400},
+		{"id":"e15dc4613df26828","type":"file","file":"math/Mathematical Analysis/integrals/Riemann Integral.md","x":320,"y":-1400,"width":400,"height":400},
+		{"id":"9f9a77eb65fb4b73","type":"file","file":"math/Mathematical Analysis/elementary functions/Exponential and Logarithmic Functions.md","x":1040,"y":-1360,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"cb81b287e3f2d6a1","fromNode":"d537c082666ce02a","fromSide":"right","toNode":"0ded3bfd1c5e09c0","toSide":"left"},
+		{"id":"64e34c3a6294696a","fromNode":"0ded3bfd1c5e09c0","fromSide":"right","toNode":"40ece31b2ce1e3bd","toSide":"left"},
+		{"id":"bde1d334749e63e5","fromNode":"0ded3bfd1c5e09c0","fromSide":"right","toNode":"5644d37285242744","toSide":"left"},
+		{"id":"d496aaba2bc0aeb3","fromNode":"5644d37285242744","fromSide":"right","toNode":"6ff8c2b3a91e174e","toSide":"left"},
+		{"id":"11532c4aaad5707a","fromNode":"e15dc4613df26828","fromSide":"right","toNode":"9f9a77eb65fb4b73","toSide":"left"},
+		{"id":"80af7ee7af6d4586","fromNode":"0ded3bfd1c5e09c0","fromSide":"top","toNode":"dbc551f5eca16164","toSide":"bottom"},
+		{"id":"7ec073f65a3305d5","fromNode":"0ded3bfd1c5e09c0","fromSide":"top","toNode":"27b93c4697da5421","toSide":"bottom"},
+		{"id":"d629648b395763be","fromNode":"e15dc4613df26828","fromSide":"bottom","toNode":"40ece31b2ce1e3bd","toSide":"top"}
+	]
+}
