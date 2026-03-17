@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Table
+  - type: table
+    name: View
+    order:
+      - file.name
+      - file.ctime
+      - file.embeds
+    sort:
+      - property: file.ctime
+        direction: DESC
+    indentProperties: false
