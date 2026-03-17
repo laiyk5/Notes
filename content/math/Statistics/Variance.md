@@ -11,15 +11,41 @@ $$
 \begin{align}
 \mathrm{Var}[X] &= \mathbb{E}[X^{2} - 2\mu X + \mu^{2}] \\
 &= \mathbb{E}[X^{2}] - 2\mu \mathbb{E}[X] + \mu^{2} \\
-&= \mathbb{E}[X^{2}] - \mu
+&= \mathbb{E}[X^{2}] - \mu^{2}
 \end{align}
 $$
 
 
 ## Transformation
 
+## $Y=CX$
+
+$$
+\sigma_{CX}^{2} = C^{2}\sigma_{X}^{2}
+$$
+
+Proof:
+
+$$
+\begin{align}
+\sigma^{2}_{Y} & = E[Y^{2}]- E^{2}[Y] \\
+ & = E[C^{2}X^{2}]-E[CX]^{2} \\
+ & = C^{2}(E[X^{2}] - E[X]^{2}) \\
+ & = C^{2}\sigma_{X}^{2}
+\end{align}
+$$
+
+## $Y=X+C$
+
 Suppose $Y=X+C$, $C$ is a constant:
 
+$$
+\sigma_{X+C}^{2} = \sigma_{X}^{2}
+$$
+
+Proof 1:
+
+Given (Proofs are in [[math/Statistics/Expectation#Linearity]] and [[math/Statistics/Distribution#Transformation]]):
 $$
 \begin{align}
 \mu_{Y} & = \mu_{X} + C \\
@@ -27,7 +53,6 @@ f_{Y}(y) & = f_{X}(y-C)
 \end{align}
 $$
 
-(Proofs are in [[math/Statistics/Expectation#Linearity]] and [[math/Statistics/Distribution#Transformation]])
 
 Thus:
 $$
@@ -39,11 +64,19 @@ $$
  & = E_{X}\left[(X-\mu_{X})^{2}\right] = \sigma_{X}^{2}
 \end{align}
 $$
-Briefly:
+
+Proof2:
+
+with [[math/Statistics/Expectation#LOTUS]] the proof is simpler:
 
 $$
-\sigma_{X+C}^{2} = \sigma_{X}^{2}
+\begin{align}
+\sigma_{Y}^{2} & = E[(Y-\mu_{Y})^{2}] \\
+ & = E\left\{ \left[ \left( X+C \right) - \left( \mu_{X}+C \right) \right]^{2} \right\} \\
+ & = E\left[ \left( X-\mu_{X} \right)^{2} \right] = \sigma_{X}^{2}
+\end{align}
 $$
+
 
 # Covariance
 
