@@ -21,7 +21,7 @@ $$
 P(X\leq x)
 $$
 
-according to [[math/Mathematical Analysis/Fundamental Theorem of Calculus]], we can briefly define CDF as
+according to [[math/Mathematical Analysis/Continuous Functions#Fundamental Theorem of Calculus]], we can briefly define CDF as
 
 $$
 P(X\leq x) = \int_{-\infty}^{x} f(t) \, dt

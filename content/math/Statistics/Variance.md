@@ -77,6 +77,14 @@ $$
 \end{align}
 $$
 
+## Sum Rule
+
+$$
+\begin{align}
+\mathrm{Var[X+Y]} &= E\left\{ \left[ (X+Y) - (\mu_{X}+\mu_{Y})\right]^{2}  \right\} \\
+&= \sigma_{X}^{2}+\sigma_{Y}^{2}+2\mathrm{Cov}(X,Y)
+\end{align}
+$$
 
 # Covariance
 

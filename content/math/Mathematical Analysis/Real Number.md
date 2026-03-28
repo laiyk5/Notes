@@ -160,9 +160,9 @@ $$
 
 充分性：
 
-柯西列有界，因此存在收敛的子列收敛于$a$，选取子列时下标$n_k$随着$k$增大而增大且$n_k \ge k$
+柯西列有界，因此存在收敛的子列收敛于$a$ [[math/Mathematical Analysis/Real Number#Bolzano-Weierstrass Theorem]]，选取子列时下标$n_k$随着$k$增大而增大且$n_k \ge k$
 
 因此$|x_n -a| < |x_n -x_{n_k}| + |x_{n_k} - a|$
 
-对于任意$\epsilon > 0$，找到使得柯西列差值与a距离、收敛子列与a距离都小于$\epsilon / 2$的$N_1, K$，选择$N=\max\{N_1, K\}$，则
+对于任意$\epsilon > 0$，找到使得柯西列差值的距离、收敛子列与a距离都小于$\epsilon / 2$的$N_1, K$，选择$N=\max\{N_1, K\}$，则
 $$n > N_1, n_k > n>N_1, n_k > K \Longrightarrow |x_n - a | < \epsilon$$

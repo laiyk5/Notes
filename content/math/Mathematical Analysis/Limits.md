@@ -1,11 +1,10 @@
 ---
 publish: true
 created: 2026-03-15T18:21:42.299+08:00
-modified: 2026-03-17T07:50:03.111+08:00
+modified: 2026-03-26T07:25:49.106+08:00
 ---
 
-
-若需要让像任意近，只需要让原像足够近
+If by selecting a small *punctuated neighborhood* of $x$, a variable $y$ determined by $x$ can close enough to a fix value in any level, then that variable $y$ is converge to that fix value.
 
 # Definition of Limits
 
@@ -92,7 +91,7 @@ $$
 $$
 which contradicts with $f(x) \leq g(x)$. So $A \leq B$
 
-# Local Boundness
+# Local Boundedness
 
 > [!quote] Local Boundness
 > If $\lim_{ x \to a }f(x) = A$, $f(x)$ is bounded in some punctured neighborhood of $a$

@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-03-16T18:25:08.115+08:00
-modified: 2026-03-17T07:55:30.584+08:00
+modified: 2026-03-26T05:08:38.884+08:00
 ---
 
 
@@ -58,8 +58,18 @@ $$
 > $f(x) = o(g(x))$ means $f(x)$ becomes insignificant compared to $g(x)$
 
 $$
-\lim_{ x \to \infty } \frac{f(n)}{g(n)} = 0
+\lim_{ n \to \infty } \frac{f(n)}{g(n)} = 0
 $$
+
+or $\lim_{ n \to \infty } \frac{o(g(n))}{g(n)} = 0$
+
+rules for little o: 
+
+- multiplying an constant doesn't change its order: $Ao(f(x)) = o(f(x))$
+- multiplying an infinitesimal make it an even higher order infinitesimal:
+	- $g(x)o(f(x))$ is $o(g(x)), o(f(x))$ or $o(f(x)g(x))$
+- adding a higher order of infinitesimal doesn't change its order: if $g(x) = o(f(x))$, then $o(f(x)) + o(g(x)) = o(f(x))$
+
 
 # Notations
 
@@ -71,3 +81,7 @@ $$
 | $f(x) \succ g(x)$   | $f(x) = \omega(g(x))$  | $f(x)$ grows strictly faster than $g(x)$ | little omega of g of x |
 | $f(x) \asymp g(x)$  | $f(x) = \Theta (g(x))$ | $f(x)$ grows as fast as $g(x)$           | theta of g of x        |
 
+# Summary
+
+- little means strict, big means no ... than
+- is "o" means upper-bound, is "omega" means lower-bound, is "theta" is the same order as

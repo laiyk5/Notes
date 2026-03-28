@@ -1,9 +1,10 @@
 ---
 publish: true
 created: 2026-03-15T18:11:20.840+08:00
-modified: 2026-03-17T07:55:23.170+08:00
+modified: 2026-03-26T05:30:26.518+08:00
 ---
 
+# Definition
 
 if a function $f$ is continuous on $(a,b)$, it's saying that for any $x_{0} \in (a,b)$, s.t.:
 
@@ -189,6 +190,8 @@ $$
 ---
 
 Proof:
+
+Prove it by [[math/Mathematical Analysis/Continuous Functions#MVT for Integrals]]:
 $$
 \frac{\int_{a}^{x+\Delta x} f(t)\,dt - \int_{a}^{x} f(t)\,dt}{\Delta x} = \lim_{ \Delta x \to 0 }  f(\xi) = f(\lim_{ \Delta x \to 0 } \xi) = f(a)
 $$
@@ -207,3 +210,13 @@ $$
 \int_{a}^{x} f(t)\,dt = F(x) - F(a)
 \implies \int_{a}^{b}f(t)\,dt = F(b) - F(a)
 $$
+
+# Prerequisite of differentiable
+
+it must be continuous to be derivable, or equivalently, differentiable.
+
+if $f$ is differentiable, then $\Delta y$ is also an infinitesimal -- which implies that $f$ is continuous.
+$$
+\lim_{ \Delta x \to 0 } \Delta y = \lim_{ \Delta x\to 0 } \left( f'(x)\Delta x  + o(\Delta x) \right) = 0
+$$
+

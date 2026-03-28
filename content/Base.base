@@ -11,3 +11,5 @@ views:
       - property: file.ctime
         direction: DESC
     indentProperties: false
+  - type: table
+    name: View 2

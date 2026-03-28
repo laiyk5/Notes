@@ -2,7 +2,7 @@
 publish: true
 title: Home Page
 created: 2026-03-16T07:24:28.441+08:00
-modified: 2026-03-18T04:16:39.371+08:00
+modified: 2026-03-18T04:18:02.036+08:00
 ---
 
 This is my knowledge base.
@@ -26,7 +26,9 @@ This is my knowledge base.
 	- Decisioning
 		- Bayesian Decision Theory
 - [Computer Graphics](masters/SemB/CS5487-CG):
+	- Object Modeling
 	- Rendering Pipeline
+	- Ray-Tracing
 	- Aliasing and Anti-Aliasing
 - [Natural Language Processing](masters/SemB/CS6493-NLP):
 	- Language Modeling
