@@ -1,25 +1,23 @@
-
-class mean: 
+class mean:
 
 $$
-\mu_{j} = \frac{1}{n_{j}}\sum_{x_{i} \in C_j} x_{i}
+\mu\_{j} = \frac{1}{n\_{j}}\sum\_{x\_{i} \in C\_j} x\_{i}
 $$
 
 class scatter:
 
 $$
-S_{j} =  \sum_{x_{i} \in C_{j}} (x_{i} - \mu_{j})(x_{i}-\mu_{j})^{T}
+S\_{j} =  \sum\_{x\_{i} \in C\_{j}} (x\_{i} - \mu\_{j})(x\_{i}-\mu\_{j})^{T}
 $$
 
 > [!note] why not inner product?
-> 
 
-goal: the find the optimal project $w^{*}$ that maximize the between class distance and within class distance:
+goal: the find the optimal project $w^{_}$ that maximize the between class distance and within class distance:
 $$
 \begin{align}
-w^{*} & = \argmax_{w} \frac{(m_{1}- m_{2})^{2}}{S_{1}+S_{2}} \\
-m_{j} & = w^{T}\mu_{j} \\
-s_{j} & =w^{T}S_{j}w
+w^{_} & = \argmax\_{w} \frac{(m\_{1}- m\_{2})^{2}}{S\_{1}+S\_{2}} \\
+m\_{j} & = w^{T}\mu\_{j} \\
+s\_{j} & =w^{T}S\_{j}w
 \end{align}
 $$
 
@@ -30,9 +28,9 @@ $$
 
 $$
 \begin{align}
-w^{*} & = \argmax_{w}\frac{(m_{1}-m_{2})^{2}}{S_{1}+S_{2}} \\
- & = \argmax_{w} \frac{(w^{T}\mu_{1} - w^{T}\mu_{2})^{2}}{w^{T}(S_{1}+S_{2})w} \\
- & = \argmax_{w} \frac{w^{T}(\mu_{1}-\mu_{2})(\mu_{1}-\mu_{2})^{T}w}{w^{T}(S_{1}+S_{2})w} \\
- & = \argmax_{w} \frac{w^{T}S_{B}w}{w^{T}S_{w}w}
+w^{\*} & = \argmax\_{w}\frac{(m\_{1}-m\_{2})^{2}}{S\_{1}+S\_{2}} \\
+& = \argmax\_{w} \frac{(w^{T}\mu\_{1} - w^{T}\mu\_{2})^{2}}{w^{T}(S\_{1}+S\_{2})w} \\
+& = \argmax\_{w} \frac{w^{T}(\mu\_{1}-\mu\_{2})(\mu\_{1}-\mu\_{2})^{T}w}{w^{T}(S\_{1}+S\_{2})w} \\
+& = \argmax\_{w} \frac{w^{T}S\_{B}w}{w^{T}S\_{w}w}
 \end{align}
 $$

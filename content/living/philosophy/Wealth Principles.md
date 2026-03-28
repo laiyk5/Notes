@@ -1,23 +1,24 @@
-
 # Real wealth
 
 Real wealth is freedom, investment, savings, not possessions, appearance, instagram posts.
 
 with savings,
+
 - you has the opportunity to invest, making income for you automatically.
 - anti-fragile, bring you away from crisis caused by job lost, desease.
 
 To have savings, you need to:
+
 - earn more:
-	- don't trade off your health and family! that's just trade one problem for another problem
-	- invest your brain
-	- be professional
-		- be reliable
-		- be the top 1%
+  - don't trade off your health and family! that's just trade one problem for another problem
+  - invest your brain
+  - be professional
+    - be reliable
+    - be the top 1%
 - live at low cost:
-	- the income doesn't matter, the difference matters
-	- you have more free time
-	- anti-fragile
+  - the income doesn't matter, the difference matters
+  - you have more free time
+  - anti-fragile
 - make proper decision.
 
 # Low-cost life style
@@ -43,4 +44,3 @@ make saving as an non-negotiable expense.
 - Your soldier: you every single yuan/dollar.
 
 spending every dollar is killing your soldier, don't do that for unreasonable reasons!
-

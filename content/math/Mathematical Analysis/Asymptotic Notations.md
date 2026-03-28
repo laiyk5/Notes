@@ -4,15 +4,15 @@ created: 2026-03-16T18:25:08.115+08:00
 modified: 2026-03-26T05:08:38.884+08:00
 ---
 
-
 # Big Three Ratio
+
 ## Big $O$
 
->[!quote] Big $O$: The Ceiling
->$f(n) = O(g(n))$ means $f(x)$ growth rate is upper-bounded by $g(x)$
+> [!quote] Big $O$: The Ceiling
+> $f(n) = O(g(n))$ means $f(x)$ growth rate is upper-bounded by $g(x)$
 
 $$
-\lim_{ n \to \infty } \frac{f(n)}{g(n)} < \infty
+\lim\_{ n \to \infty } \frac{f(n)}{g(n)} < \infty
 $$
 
 This saids: there exists a constant $M\geq0$ and a constant $\delta > 0$, as $x \in (a-\delta, a) \cup (a, a+\delta)$, $\left| \frac{f(x)}{g(x)} \right| \leq M$, or
@@ -32,16 +32,14 @@ $$
 $$
 as $N\geq1$, $\left| \frac{f(n)}{n^{2}} \right|\leq 3 + 5 + 2= 10$, which saids $|f(n)| \leq 10 |n^{2}|$, it's bounded by $n^{2}$
 
-
 ## Big Theta Notation
 
 > [!quote] Big Theta Notation: Same Growth Rate
-> 
+>
 > $f(x) = \Theta (g(x))$ implies $f(x)$ has exactly the same growth rate as $g(x)$
-> 
 
 $$
-0 < c_{1} \leq \left| \frac{f(n)}{g(n)} \right| \leq c_{2}
+0 < c\_{1} \leq \left| \frac{f(n)}{g(n)} \right| \leq c\_{2}
 $$
 
 ## Big Omega Notation
@@ -49,7 +47,7 @@ $$
 $f(x) = \Omega(g(x))$ saids that $\exists N > 0$, as long as $n>N$
 
 $$
-\left| \frac{f(n)}{g(n)} \right| \geq c_{1} > 0
+\left| \frac{f(n)}{g(n)} \right| \geq c\_{1} > 0
 $$
 
 # Little $o$
@@ -58,18 +56,17 @@ $$
 > $f(x) = o(g(x))$ means $f(x)$ becomes insignificant compared to $g(x)$
 
 $$
-\lim_{ n \to \infty } \frac{f(n)}{g(n)} = 0
+\lim\_{ n \to \infty } \frac{f(n)}{g(n)} = 0
 $$
 
-or $\lim_{ n \to \infty } \frac{o(g(n))}{g(n)} = 0$
+or $\lim\_{ n \to \infty } \frac{o(g(n))}{g(n)} = 0$
 
-rules for little o: 
+rules for little o:
 
 - multiplying an constant doesn't change its order: $Ao(f(x)) = o(f(x))$
 - multiplying an infinitesimal make it an even higher order infinitesimal:
-	- $g(x)o(f(x))$ is $o(g(x)), o(f(x))$ or $o(f(x)g(x))$
+  - $g(x)o(f(x))$ is $o(g(x)), o(f(x))$ or $o(f(x)g(x))$
 - adding a higher order of infinitesimal doesn't change its order: if $g(x) = o(f(x))$, then $o(f(x)) + o(g(x)) = o(f(x))$
-
 
 # Notations
 

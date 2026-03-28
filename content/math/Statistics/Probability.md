@@ -6,36 +6,40 @@
 概率是集合函数，规定了一系列性质，方便在上面做代数运算
 
 定义：
+
 - $P(S) = 1$
 - $P(A) \geq 0$
-- 可列可加性: $P(A_1 \cup A_2 \cup \dots) = P(A_1) + P(A_2) + \dots$
-定义是最小的规则集合，可以推出更多我们能自然理解的规则：
+- 可列可加性: $P(A\_1 \cup A\_2 \cup \dots) = P(A\_1) + P(A\_2) + \dots$
+  定义是最小的规则集合，可以推出更多我们能自然理解的规则：
 - $P(\emptyset) = 0$: $P(S) + P(\emptyset) = P(S \cup \emptyset) = P(S) = 1$
 - $P(A - B) = P(A) - P(B)$: $P(A) = P(A - B) + P(B)$
-	- $P(\overline{A}) = 1 - P(A)$
+  - $P(\overline{A}) = 1 - P(A)$
 - $P(A \cup B) = P(A) + P(B) - P(AB)$: $P(A \cup B) = P((A-AB) \cup B) = P(A - AB) + P(B) = P(A) + P(B) - P(AB)$
 
 本质上概率就是说我可以用这个函数建立起一套代数系统，方便我对事件做可能性的量化计算。至于怎么建模可能性，和这些个定义和运算方法目前无关，因此才产生了频率和贝叶斯的观点。
 
 ## 条件概率
 
-
 $P(A | B) = P(AB)/ P(B), P(B) > 0$
 
 $P(\cdot | B)$ 满足概率定义，因为：
-- $P(\cdot | B) = P(AB) / P(B) > 0$
-- $P(S | B) = P(B) / P(B) = 1$
-- $P(A_1 \cup A_2 \cup \dots | B) = P(A_1 B \cup A_2 B \cup \dots) / P(B) = P(A_1 | B) + P(A_2 | B) + \dots$
-所以适用于概率的恒等式也都适用于条件概率
 
-- 乘法公式：$P(A_1 A_2 \dots) = \prod_{i=1} P(A_i | A_{i+1}, \dots)$
-	- 条件概率的条件概率：把新条件$B$与到已有条件$C$里：$P(A|BC) = \frac{P(AB|C)}{P(B|C)}$，因为$P(ABC) = P(A | BC) P(B | C) P (C)$
-	- 将$\prod_i C_i$看作$C$，则有$P(A | B C_1C_2\dots) = \frac{P(AB | C_1C_2\dots)}{P(B | C_1C_2\dots)}$
-- 全概率公式：有一组假设$\{B_i\}$ 是A的分割，即$AB_{i}$的和事件为A且互斥，则有：$P(A) = \sum{P(AB)} \sum_{i} = P(A_i | B_i) P(B_i)$
+- $P(\cdot | B) = P(AB) / P(B) > 0$
+
+- $P(S | B) = P(B) / P(B) = 1$
+
+- $P(A\_1 \cup A\_2 \cup \dots | B) = P(A\_1 B \cup A\_2 B \cup \dots) / P(B) = P(A\_1 | B) + P(A\_2 | B) + \dots$
+  所以适用于概率的恒等式也都适用于条件概率
+
+- 乘法公式：$P(A\_1 A\_2 \dots) = \prod\_{i=1} P(A\_i | A\_{i+1}, \dots)$
+  - 条件概率的条件概率：把新条件$B$与到已有条件$C$里：$P(A|BC) = \frac{P(AB|C)}{P(B|C)}$，因为$P(ABC) = P(A | BC) P(B | C) P (C)$
+  - 将$\prod\_i C\_i$看作$C$，则有$P(A | B C\_1C\_2\dots) = \frac{P(AB | C\_1C\_2\dots)}{P(B | C\_1C\_2\dots)}$
+
+- 全概率公式：有一组假设${B\_i}$ 是A的分割，即$AB\_{i}$的和事件为A且互斥，则有：$P(A) = \sum{P(AB)} \sum\_{i} = P(A\_i | B\_i) P(B\_i)$
 
 贝叶斯定理
 
-$P(A|B) = \frac{P(AB)}{P(B)} = \frac{P(A)P(B|A)}{P(B)} = \frac{P(B|A)}{P(B)} P(A)$ 
+$P(A|B) = \frac{P(AB)}{P(B)} = \frac{P(A)P(B|A)}{P(B)} = \frac{P(B|A)}{P(B)} P(A)$
 
 A: 肺癌，B：吸烟。现在发现肺癌里吸烟的人很多。
 
@@ -46,6 +50,7 @@ A: 肺癌，B：吸烟。现在发现肺癌里吸烟的人很多。
 患病$A$ 阳性$B$
 
 比如
+
 - 患病(A)率为 $P(A)=0.0004$
 - 患病阳性(TPR)率为 $P(B|A) = 0.99$
 - 不患病阴性率(TNR)为 $P(\overline{B} | \overline{A})=0.999$
@@ -54,7 +59,7 @@ A: 肺癌，B：吸烟。现在发现肺癌里吸烟的人很多。
 $$
 P(B) = P(B|\overline{A}) P(\overline{A}) + P(B|A) P(A)
 $$
-阳性率为$$P(B) = (1 - 0.999) * (1 - 0.0004) + 0.99 * 0.0004 = 0.0013956$$
+阳性率为$$P(B) = (1 - 0.999) \* (1 - 0.0004) + 0.99 \* 0.0004 = 0.0013956$$
 但实际上阳性下患病率也就 $P(A|B)=P(B|A)P(A)/P(B) = 0.28374893$，因此TPR、TNR双高并不代表PPV就高，
 
 在样本比较均衡的时候，TPR、TNR高就意味着PPV、NPV双高
@@ -73,7 +78,6 @@ $$
 
 因此如果TPR/FPR不够大，稍微放大一下负样本的数量就会让PPV变小了。
 
-
 所以阳性下患病率
 
 而阴性下非患病率被放大了 $P(B|\overline{A}) / P(B) = 0.71653769$，患病率下降至 $0.00028662$。FNR低于
@@ -82,40 +86,42 @@ $$
 
 - P、N：例子的正负两面
 - T、N：正确判断、错误判断
-	- TP、TN：正确判断的正例、负例数量
-	- FP、FN：判断为P/N，但判断错误（F），实际为N/P
+  - TP、TN：正确判断的正例、负例数量
+  - FP、FN：判断为P/N，但判断错误（F），实际为N/P
 - P = TP + FN，N = TN + FP
 - 看真实分类里的预测准确率：
-	- TPR (sensitivity敏感性)、TNR(specificity特异性)：TP/P（正确判断的正例占所有正例的比例），TN/N
-	- FPR假阳率、FNR假阴率：FP/N，FN/P
+  - TPR (sensitivity敏感性)、TNR(specificity特异性)：TP/P（正确判断的正例占所有正例的比例），TN/N
+  - FPR假阳率、FNR假阴率：FP/N，FN/P
 - 看预测分类里的准确率：
-	- PPV、NPV：TP/(TP+FP) , TN/(TN+FP)
-	- FD(discovery)R, FO(omission)R：FP/(TP+FP) (Precision), FN/(TN+FN)
-- 看全体：accuracy 准确度 $\frac{TP+TN}{P+N}$ 
+  - PPV、NPV：TP/(TP+FP) , TN/(TN+FP)
+  - FD(discovery)R, FO(omission)R：FP/(TP+FP) (Precision), FN/(TN+FN)
+- 看全体：accuracy 准确度 $\frac{TP+TN}{P+N}$
 
 > [!note]
 > 真假{T,F} 预测{P,N} 除以 {阳预测，阴预测，阳样本，阴样本}
 
-> [!note] 
+> [!note]
+>
 > - 真阳占正样本的比例是真阳率TPR，衡量模型敏感性；预测错误的比例是假阴率FNR，是犯第二类（β）取伪错误的比例
 > - 真阴占负样本的比例是真阴率TNR，说明模型的特异性，是犯第一类（α）弃真错误的比例
 > - 真阳占阳预测的比例是正预测值PPR，真阴占阴预测的比例是负预测值NPR
 > - 假阳占阳预测的比例是错误发现率，假阴占阴预测的比例是错误遗漏率
+
 ### 独立
 
 概念源于条件概率，但是不以条件概率定义。
 
 - 正式定义：$P(AB) = P(A)P(B)$
 - 推论：$P(A|B) = P(A), P(B|A) = P(B)$
-	- $A,B$独立了后，$\overline{A},B$也独立，因为：$P(\overline{A})P(B) = P(B) - P(A)P(B) = P(B-AB) = P(B\overline{A})$
-	- 所以$(\overline{B}, A), (\overline{B}, \overline{A})$ 也独立
+  - $A,B$独立了后，$\overline{A},B$也独立，因为：$P(\overline{A})P(B) = P(B) - P(A)P(B) = P(B-AB) = P(B\overline{A})$
+  - 所以$(\overline{B}, A), (\overline{B}, \overline{A})$ 也独立
 
 所有结合条件概率定义的公式也同样在新增条件的条件概率上成立
 
 #### 条件独立
 
-正式定义：$P(B_1, B_2 | A) = P(B_1 | A) P(B_2 | A)$
-直观定义：$P(B_1 | B_2A) = P(B_1 | A)$，新增条件$B2$对我没影响
+正式定义：$P(B\_1, B\_2 | A) = P(B\_1 | A) P(B\_2 | A)$
+直观定义：$P(B\_1 | B\_2A) = P(B\_1 | A)$，新增条件$B2$对我没影响
 由于形式上的一致性（条件概率的条件概率定义，条件概率满足概率公式），所有普通独立性的推论也对条件独立成立。
 
 ## 古典概率模型

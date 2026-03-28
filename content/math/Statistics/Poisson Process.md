@@ -1,4 +1,3 @@
-
 # Bernoulli Distribution
 
 单次概率$p$
@@ -19,15 +18,15 @@ $$
 
 每次概率p，n次出现x次的概率
 $$
-P(X=x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x (1-p)^{n-x}
+P(X=x) = \begin{pmatrix} n \ x \end{pmatrix} p^x (1-p)^{n-x}
 $$
-
 
 # Poisson Process
 
-当随机过程 $\{N(t), t > 0\}$ 被称为Poisson过程：
+当随机过程 ${N(t), t > 0}$ 被称为Poisson过程：
+
 - 从零开始：$N(0) = 0$
-- 无记忆：$N(t_1+T) - N(t_1) = N(t_2 + T) - N(t_2)$
+- 无记忆：$N(t\_1+T) - N(t\_1) = N(t\_2 + T) - N(t\_2)$
 - 独立性：事件的发生互不干扰
 - 稀疏性：发生两个事件的概率几乎为0
 
@@ -37,8 +36,7 @@ Poisson Process: 随机事件在连续时间内发生的基础模型
 
 - 计数视角：单位事件发生的次数分布（离散）possion分布
 - 间隔视角：相邻两事件的时间间隔（连续），指数分布
-- 等待视角：从零时刻到第n个事件发生所经历的总时间$S_n$（连续）gamma分布
-
+- 等待视角：从零时刻到第n个事件发生所经历的总时间$S\_n$（连续）gamma分布
 
 ## Poisson Distribution
 
@@ -48,13 +46,13 @@ $$
 
 \begin{align}
 
-P(X = k) & = \lim_{n \to \infty} \binom{n}{k} \left(\frac{\lambda}{n}\right)^k \left(1-\frac{\lambda}{n}\right)^{n-k} \\
+P(X = k) & = \lim\_{n \to \infty} \binom{n}{k} \left(\frac{\lambda}{n}\right)^k \left(1-\frac{\lambda}{n}\right)^{n-k} \\
 
-&= \lim_{n\to \infty} \frac{n!}{k!(n-k)!} \left(\frac{\lambda}{n}\right)^k \left(1-\frac{\lambda}{n}\right)^{n-k} \\
+&= \lim\_{n\to \infty} \frac{n!}{k!(n-k)!} \left(\frac{\lambda}{n}\right)^k \left(1-\frac{\lambda}{n}\right)^{n-k} \\
 
-&= \frac{\lambda^k}{k!} \lim_{n \to \infty} \frac{n!}{n^k (n-k)!} \lim_{n \to \infty} \left(1-\frac{\lambda}{n}\right)^{n} \lim_{n \to \infty} \left(1-\frac{\lambda}{n}\right)^{-k} \\
+&= \frac{\lambda^k}{k!} \lim\_{n \to \infty} \frac{n!}{n^k (n-k)!} \lim\_{n \to \infty} \left(1-\frac{\lambda}{n}\right)^{n} \lim\_{n \to \infty} \left(1-\frac{\lambda}{n}\right)^{-k} \\
 
-&= \frac{\lambda^k}{k!} \lim_{n \to \infty} \left(1-\frac{1}{n / \lambda}\right)^{n / \lambda * \lambda}\\
+&= \frac{\lambda^k}{k!} \lim\_{n \to \infty} \left(1-\frac{1}{n / \lambda}\right)^{n / \lambda \* \lambda}\\
 
 &= \frac{\lambda^k e^{-\lambda}}{k!}
 
@@ -66,10 +64,10 @@ The expectation of Poisson distribution is:
 
 $$
 \begin{align}
-\mathbb{E}[X] &= \lim_{ N \to \infty }  \sum_{k=0}^{N} kP(X=k) = \lim_{ k \to \infty } \sum_{k=1}^{N} kP(X=k) \\
-&= \lim_{ N \to \infty } \sum_{k=1}^{N} \frac{\lambda^k}{(k-1)!} e^{-\lambda} \\
-&= \lambda e^{-\lambda} \lim_{ N \to \infty } \sum_{k=1}^{N} \frac{\lambda^{(k-1)}}{(k-1)!} \\
-&= \lambda e^{-\lambda} \lim_{ N \to \infty } \sum_{k=0}^{N-1} \frac{\lambda^{k}}{k!} \\
+\mathbb{E}\[X] &= \lim\_{ N \to \infty }  \sum\_{k=0}^{N} kP(X=k) = \lim\_{ k \to \infty } \sum\_{k=1}^{N} kP(X=k) \\
+&= \lim\_{ N \to \infty } \sum\_{k=1}^{N} \frac{\lambda^k}{(k-1)!} e^{-\lambda} \\
+&= \lambda e^{-\lambda} \lim\_{ N \to \infty } \sum\_{k=1}^{N} \frac{\lambda^{(k-1)}}{(k-1)!} \\
+&= \lambda e^{-\lambda} \lim\_{ N \to \infty } \sum\_{k=0}^{N-1} \frac{\lambda^{k}}{k!} \\
 &= \lambda
 \end{align}
 $$
@@ -78,9 +76,9 @@ The Variance of Poisson distribution is:
 
 $$
 \begin{align}
-\mathrm{var}[X] &= \mathbb{E}[X^{2}] - \mathbb{E}[X]^{2} \\
-&= \mathbb{E}[X^{2}]-\lambda^{2} \\
-&= \mathbb{E}[X[X-1]] + \mathbb{E}[X] - \lambda^{2} \\
+\mathrm{var}\[X] &= \mathbb{E}\[X^{2}] - \mathbb{E}\[X]^{2} \\
+&= \mathbb{E}\[X^{2}]-\lambda^{2} \\
+&= \mathbb{E}\[X\[X-1]] + \mathbb{E}\[X] - \lambda^{2} \\
 &= \lambda^{2} + \lambda - \lambda^{2} = \lambda
 \end{align}
 $$
@@ -92,8 +90,8 @@ $$
 $$
 P(X > s + t | X > s) = P(X > t)
 $$
-  
-等待时间$X > t$，即在时间段$[0, t]$内，事件发生的次数为0
+
+等待时间$X > t$，即在时间段$\[0, t]$内，事件发生的次数为0
 $$
 P(X > t) = P(N(t) = 0) = \frac{(\lambda t)^0 e^{-\lambda t}}{0!} = e^{-\lambda t}
 $$
@@ -107,6 +105,7 @@ PDF 就为:
 $$
 f(t) = \frac{d}{d t} F(t) = \lambda e^{-\lambda t}
 $$
+
 ## Gamma Distribution
 
 ### Gamma Function: Factorial on Real Number
@@ -125,11 +124,11 @@ $$
 $$
 令$t=-\ln x$
 $$
-\Gamma(n) = \int_0^{\infty} t^{n-1}e^{-t} dt
+\Gamma(n) = \int\_0^{\infty} t^{n-1}e^{-t} dt
 $$
 令$n=-1/2$，再令$t=x^2$
 $$
-\Gamma(1/2) = \int_0^{\infty} t^{-1/2}e^{-t} dt = \int_0^{\infty} x^{-1} e^{-x^2} d x^2 = 2 \int_0^{\infty} e^{-x^2} dx
+\Gamma(1/2) = \int\_0^{\infty} t^{-1/2}e^{-t} dt = \int\_0^{\infty} x^{-1} e^{-x^2} d x^2 = 2 \int\_0^{\infty} e^{-x^2} dx
 $$
 两次事件发生的时间间隔：指数分布
 
@@ -138,17 +137,16 @@ $$
 - Deduction: from several general to a more specific conclusion
 - Induction: from special cases to general form
 
-
 等待n个事件发生所需要的时间
 
 $$
-F(t) = P(T_n \le t) = P(N(t) \ge n) = \sum_{k=n}^{\infty} \frac{(\lambda t)^k e^{-\lambda k}}{k!}
+F(t) = P(T\_n \le t) = P(N(t) \ge n) = \sum\_{k=n}^{\infty} \frac{(\lambda t)^k e^{-\lambda k}}{k!}
 $$
 
 $$
 \begin{align}
 f(t) &= \frac{d F(t)}{ dt} \\
-&= \sum_{k=n}^{\infty} \left[ \frac{\lambda^k t^{k-1} e^{-\lambda k}}{(k-1)!} - \frac{\lambda^{k+1} t^k e^{-\lambda k}}{k!} \right] \\
+&= \sum\_{k=n}^{\infty} \left\[ \frac{\lambda^k t^{k-1} e^{-\lambda k}}{(k-1)!} - \frac{\lambda^{k+1} t^k e^{-\lambda k}}{k!} \right] \\
 &= \frac{\lambda^n t^{n-1} e^{-\lambda n}}{(n-1)!} \\
 &= \frac{t^{\alpha-1} e^{-n/\beta}}{\Gamma(\alpha) \beta^{\alpha}}
 \end{align}
@@ -157,11 +155,11 @@ $$
 高斯积分
 $$
 \begin{align}
-\int_{-\infty}^{+\infty} e^{-x^2} dx  \int_{-\infty}^{+\infty} e^{-y^2} dy
-&= \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} e^{-(x^2 + y^2)}\, dx\, dy \\
-&= \int_{0}^{2\pi} \int_{0}^{+\infty} e^{-r^2} r\,dr\,d\theta \\
-&= \int_{0}^{2\pi} (-\frac{1}{2}) \int_{0}^{+\infty} e^{-r^2} d (-r^2) d\theta \\
-&= \int_{0}^{2\pi} (-\frac{1}{2}) (e^{-r^2} |_{0}^{+\infty}) d\theta \\
+\int\_{-\infty}^{+\infty} e^{-x^2} dx  \int\_{-\infty}^{+\infty} e^{-y^2} dy
+&= \int\_{-\infty}^{+\infty}\int\_{-\infty}^{+\infty} e^{-(x^2 + y^2)}, dx, dy \\
+&= \int\_{0}^{2\pi} \int\_{0}^{+\infty} e^{-r^2} r,dr,d\theta \\
+&= \int\_{0}^{2\pi} (-\frac{1}{2}) \int\_{0}^{+\infty} e^{-r^2} d (-r^2) d\theta \\
+&= \int\_{0}^{2\pi} (-\frac{1}{2}) (e^{-r^2} |_{0}^{+\infty}) d\theta \\
 &= \pi \\
 \Longrightarrow \\
 \int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}

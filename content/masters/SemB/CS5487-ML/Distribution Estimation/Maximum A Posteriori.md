@@ -7,14 +7,12 @@ p(\theta | D) &= \frac{p(D | \theta) p(\theta)}{p(D)} \\
 \end{align}
 $$
 
-
 Given a dataset, adjust the distribution of parameter. Find the parameter that maximizes the probability of the parameter. It can be written as:
 
 $$
 \begin{align}
-\hat \theta_{MAP} (x) =& \operatorname*{argmax}_\theta p(\theta | x) \\
-=& \operatorname*{argmax}_\theta \frac{f(x | \theta) g(\theta)}{\int f(x | \theta') g(\theta') d\theta'} \\
-=& \argmax_\theta f(x|\theta)g(\theta)
+\hat \theta\_{MAP} (x) =& \operatorname\*{argmax}_\theta p(\theta | x) \\
+\=& \operatorname\*{argmax}_\theta \frac{f(x | \theta) g(\theta)}{\int f(x | \theta') g(\theta') d\theta'} \\
+\=& \argmax\_\theta f(x|\theta)g(\theta)
 \end{align}
 $$
-

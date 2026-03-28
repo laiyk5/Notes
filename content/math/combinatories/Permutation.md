@@ -8,8 +8,8 @@ Cauchy's two-line notation
 
 $$
 \sigma = \begin{pmatrix}
-x_1 & x_2 & x_3 & \dots & x_n \\
-\sigma(x_1) & \sigma(x_2) & \sigma(x_3) & \dots & \sigma(x_n) \\
+x\_1 & x\_2 & x\_3 & \dots & x\_n \\
+\sigma(x\_1) & \sigma(x\_2) & \sigma(x\_3) & \dots & \sigma(x\_n) \\
 \end{pmatrix}
 $$
 
@@ -18,7 +18,7 @@ $$
 one-line notation
 
 $$
-\sigma = \sigma(x_1)\sigma(x_2) \dots \sigma(x_n)
+\sigma = \sigma(x\_1)\sigma(x\_2) \dots \sigma(x\_n)
 $$
 
 ## cycle notation
@@ -60,8 +60,9 @@ the order of a permutation is the smallest positive number that $\sigma^m = \rm{
 
 The number is the least common multiple (lcm) of the lengths of its cycles, so every elements cycles back to its original position.
 $$
-m = \rm{lcm}(k_1, k_2, \dots, k_n)
+m = \rm{lcm}(k\_1, k\_2, \dots, k\_n)
 $$
+
 ### parity of permutation
 
 every permutation of a finite set can be expressed as the product of transpositions since every cycle can be composed by transpositions:
@@ -89,12 +90,12 @@ $$
 \rm{sgn}(\sigma \pi) = \sgn(\sigma)\sgn(\pi)
 $$
 
-Proof: 
+Proof:
 
 1. both $\sigma$ and $\pi$ can be decomposed to transpositions. so $\sigma \pi$ can also be decomposed to the compositions of these transpositions.
 2. odd + odd is even, odd + even is odd, even + even is even. This match with (-1)(-1) = 1, (-1)(1) = (-1), (1)(1) = 1.
 3. This is what to be proven.
 
 > [!note] Transposition
-> 
+>
 > a transposition is a single 2-cycle

@@ -1,6 +1,6 @@
 $$
-\DeclareMathOperator*{\argmin}{argmin}
-\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator\*{\argmin}{argmin}
+\DeclareMathOperator\*{\argmax}{argmax}
 \argmin
 \argmax
 \text{commands are defined here}
@@ -11,6 +11,7 @@ $$
 # The Definition of MLE
 
 Step 1, make assumptions:
+
 - assume the distribution is ..., and the PDF/PMF is $p(x;\theta)$
 
 Now estimate the parameters by maximizing the likelihood.
@@ -19,25 +20,25 @@ Likelihood: the product of the possibility / possibility density of the data / d
 
 Given a sample dataset $D$, the likelihood is a function of $\theta$:
 $$
-L(\theta) = \prod_{x\in D} p(x;\theta)
+L(\theta) = \prod\_{x\in D} p(x;\theta)
 $$
 Since log is monotone, sometimes we use log-likelihood:
 $$
-LL(\theta) = \log L(\theta) = \sum_{x\in D}\log p(x;\theta)
+LL(\theta) = \log L(\theta) = \sum\_{x\in D}\log p(x;\theta)
 $$
 
 Find the $\theta$ that maximize the possibility of $D$ occurs:
 $$
-\hat\theta_{ML} = \argmax_{\theta} L(\theta)
+\hat\theta\_{ML} = \argmax\_{\theta} L(\theta)
 $$
 
 # The property of MLE
 
 ## consistency of MLE
 
-the optimized $\hat\theta_{n}$ is converge in probability to the true parameter $\theta_0$
+the optimized $\hat\theta\_{n}$ is converge in probability to the true parameter $\theta\_0$
 $$
-\lim_{n\to +\infty} P(|\hat\theta_{ML} - \theta_0| \ge \epsilon) = 0
+\lim\_{n\to +\infty} P(|\hat\theta\_{ML} - \theta\_0| \ge \epsilon) = 0
 $$
 
 ## asymptotic normality of MLE
@@ -45,7 +46,6 @@ $$
 估计误差的分布会趋近于正态分布
 
 ## asymptotic efficiency of MLE
-
 
 ## Invariance of MLE
 
@@ -55,26 +55,24 @@ $$
 \begin{align}
 \eta = g(\theta) \\
 
-M(\eta) = \sup_{\theta:g(\theta) = \eta} L(\theta)\\
+M(\eta) = \sup\_{\theta:g(\theta) = \eta} L(\theta)\\
 
-
-
-\hat\eta_{ML} = \argmin_{\theta} L(g(\theta))
+\hat\eta\_{ML} = \argmin\_{\theta} L(g(\theta))
 
 \end{align}
 $$
 
 Define the likelihood of $\eta$ as the supremum of $L(\theta)$ with $\eta = g(\theta)$:
 $$
-M(\eta) = \sup_{\{\theta : g(\theta) = \eta\}} L(\theta)
+M(\eta) = \sup\_{{\theta : g(\theta) = \eta}} L(\theta)
 $$
 And the optimized $\eta$ should be the one that makes $M(\hat\eta)$ be supremum of $M(\eta)$, which is the supremum of $L(\theta)$:
 $$
-M(\hat\eta) = \sup_\eta M(\eta) = \sup_\eta \left( \sup_{\{ \theta: g(\theta) = \eta \}} L(\theta) \right) = \sup_\theta L(\theta) = L(\hat\theta)
+M(\hat\eta) = \sup\_\eta M(\eta) = \sup\_\eta \left( \sup\_{{ \theta: g(\theta) = \eta }} L(\theta) \right) = \sup\_\theta L(\theta) = L(\hat\theta)
 $$
 
 and the likelihood of $\eta = g(\hat\theta)$ is:
 $$
-M(g(\hat\theta)) = \sup_{\{ \theta: g(\theta) = g(\hat\theta) \}} L(\theta) = L(\hat\theta)
+M(g(\hat\theta)) = \sup\_{{ \theta: g(\theta) = g(\hat\theta) }} L(\theta) = L(\hat\theta)
 $$
-which means $M(g(\hat\theta)) = \sup_\eta M(\eta)$, so $\hat\eta$ can be $g(\hat\theta)$
+which means $M(g(\hat\theta)) = \sup\_\eta M(\eta)$, so $\hat\eta$ can be $g(\hat\theta)$
