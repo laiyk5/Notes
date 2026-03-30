@@ -1,5 +1,9 @@
 Best strategy: You can use iPhone with 2700 RMB/iPhone and change for a better one every 2 years!
 
+策略就是保持落后两代，两年一换，每次都买pro机型的第二档存储
+实操就是买99新二手，贴膜带套换官方电池好好保养，过两年当99新卖掉，再换新的落后两代的二手
+结果就是省70%+，2700爽用iPhone
+
 ## Naive Strategy
 
 buy newest model Pro with second level storage from apple store with full price, and ignore damage risk.
@@ -76,11 +80,11 @@ Per year:       ¥1,394.50
 
 💰 Smart vs Naive:
 Daily savings:  ¥3.2199
-4-year savings: ¥7,490.00 (72.9%)
+4-year savings: ¥4,701.00 (45.7%)
 
 💰 Smart vs Current Plan:
 Daily savings:  ¥4.4863
-4-year savings: ¥9,339.00 (77.0%)
+4-year savings: ¥6,550.00 (54.0%)
 
 ## Appendix: Simulation Code
 
@@ -167,13 +171,13 @@ def print_comparison():
     print("=" * 80)
     
     # vs Naive
-    save_naive = naive.total_cost() - smart.total_cost()
+    save_naive = (naive.cost_per_year() - smart.cost_per_year()) * naive.lifecycle_years
     print(f"\n💰 Smart vs Naive:")
     print(f"   Daily savings:  ¥{naive.cost_per_day() - smart.cost_per_day():.4f}")
     print(f"   4-year savings: ¥{save_naive:,.2f} ({save_naive/naive.total_cost()*100:.1f}%)")
     
     # vs Current
-    save_current = current.total_cost() - smart.total_cost()
+    save_current = (current.cost_per_year() - smart.cost_per_year()) * current.lifecycle_years
     print(f"\n💰 Smart vs Current Plan:")
     print(f"   Daily savings:  ¥{current.cost_per_day() - smart.cost_per_day():.4f}")
     print(f"   4-year savings: ¥{save_current:,.2f} ({save_current/current.total_cost()*100:.1f}%)")

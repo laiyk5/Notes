@@ -2,9 +2,10 @@
 
 # CLT
 
-sampling from a population with expectation $\mu$ and variance $\sigma^{2}$, and the sample mean is $\bar{X}_{n}$, then CLT is saying:
+while [[Law of Large Number]] saids the sample means almost surely converges to the population's mean, CLT saids the distribution of the $n$-th sample mean $\bar{X}\_{n}$ is a Gaussian distribution controlled by the population's expectation $\mu$ and variance $\sigma^{2}$
+
 $$
-\bar{X}_{n} \sim N\left( \mu, \frac{\sigma^{2}}{n} \right)
+\bar{X}\_{n} \sim N\left( \mu, \frac{\sigma^{2}}{n} \right)
 $$
 
 # Standardizing sample mean

@@ -35,7 +35,7 @@ $$
 as $n \to +\infty$, $X$ converges to $\mu$ in probability.
 
 $$
-\lim\_{ n \to \infty } P(|X - \mu| < \epsilon) \leq \lim\_{ n \to \infty }  \frac{\sigma^{2}}{n\epsilon^{2}} = 0
+\lim\_{ n \to \infty } P\left(|X - \mu| < \epsilon \right) \leq \lim\_{ n \to \infty }  \frac{\sigma^{2}}{n\epsilon^{2}} = 0
 $$
 
 the probability of being an outlier would be very low.
@@ -45,7 +45,7 @@ Why it's called "weak": it converges in probability, which is weaker than almost
 # Strong Law of Large Number
 
 $$
-P(\lim\_{ n \to \infty } \bar{X}\_{n} = \mu) = 1
+P\left( \lim\_{ n \to \infty } \bar{X}\_{n} = \mu \right)  = 1
 $$
 
 the sample mean definitely converges to the expectation as $n$ growths.
