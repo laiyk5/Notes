@@ -2,7 +2,7 @@ Best strategy: You can use iPhone with 2700 RMB/iPhone and change for a better o
 
 策略就是保持落后两代，两年一换，每次都买pro机型的第二档存储
 实操就是买99新二手，贴膜带套换官方电池好好保养，过两年当99新卖掉，再换新的落后两代的二手
-结果就是省70%+，2700爽用iPhone
+结果就是省40%+，2700爽用iPhone
 
 ## Naive Strategy
 
@@ -63,7 +63,7 @@ Phone cost:     ¥10,999.00
 Repair costs:   ¥969.00
 Accessories:    ¥160.00
 ─────────────────────────────
-TOTAL:          ¥12,128.00
+TOTAL:          ¥12,128
 Per day:        ¥8.3068
 Per year:       ¥3,032.00
 

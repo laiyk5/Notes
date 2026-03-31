@@ -21,9 +21,9 @@ $$
 MLE of $\lambda$:
 $$
 \begin{align}
-\hat{\lambda}_{ML} &= \argmax_{\lambda} \mathcal{L}(\lambda) \\
-&= \argmax\_{\lambda} \ln\mathcal{L}(\lambda) \\
-&= \argmax\_{\lambda} -n\lambda + \left( \sum\_{i=1}^{N} k\_{i}  \right) \ln \lambda \\
+\hat{\lambda}_{ML} &= \arg\max_{\lambda} \mathcal{L}(\lambda) \\
+&= \arg\max\_{\lambda} \ln\mathcal{L}(\lambda) \\
+&= \arg\max\_{\lambda} -n\lambda + \left( \sum\_{i=1}^{N} k\_{i}  \right) \ln \lambda \\
 \end{align}
 $$
 

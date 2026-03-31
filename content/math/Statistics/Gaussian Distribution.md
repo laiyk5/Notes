@@ -78,7 +78,7 @@ $$
 \end{align}
 $$
 
-with [[Integration of Gaussian function]]:
+with [[Gaussian Integral]]:
 
 $$
 1 = A\sqrt{\frac{2\pi}{C}} \implies A = \sqrt{ \frac{C}{2\pi} }
